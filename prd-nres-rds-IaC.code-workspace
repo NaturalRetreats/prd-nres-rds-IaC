@@ -5,6 +5,7 @@
 		}
 	],
 	"settings": {
-		"window.zoomLevel": 1.5
+		"window.zoomLevel": 1.4,
+		"editor.fontSize": 16
 	}
 }
