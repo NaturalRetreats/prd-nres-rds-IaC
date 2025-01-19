@@ -1,4 +1,4 @@
-# This code is only for Production environment. This code will create Subnets, Security Groups, Application Load Balancer, RDS Instance, WAF
+# This code is only for Production environment. This code will create Subnets, Security Groups, Application Load Balancer, RDS Instance,
 # and all other required resources in AWS.
 
 terraform {
