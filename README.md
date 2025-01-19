@@ -30,3 +30,8 @@ The code was first executed on 17th January 2025 and the infrastructure was depl
 ## Terraform.tfvars
 1. aws_access_key: AWS access key
 2. aws_secret_key: AWS secret key
+
+## WAF
+1. Creation of WAF via terraform is not supported. It gives error regarding the region.
+2. WAF is created via AWS console.
+3. WAF is associated with the ALB via console.

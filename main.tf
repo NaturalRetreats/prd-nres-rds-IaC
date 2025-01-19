@@ -420,7 +420,10 @@ resource "aws_db_instance" "prd-nres-rds" {
   }
 }
 
-/*# WAF Configuration
+/*
+# WAF Configuration. Creation of WAF via terraform is not supported. It gives error regarding the region.
+#  WAF is created via AWS console.
+
 resource "aws_wafv2_web_acl" "prd-waf" {
   name        = "prd-waf-acl"
   description = "WAF ACL for production environment"
@@ -564,11 +567,13 @@ resource "aws_wafv2_web_acl_logging_configuration" "prd-waf-logging" {
 }
 
 
-# Associate WAF with ALB
+# Associate WAF with ALB - This code is not working.
 resource "aws_wafv2_web_acl_association" "alb-waf-association" {
   resource_arn = aws_lb.prd-alb.arn
   web_acl_arn  = aws_wafv2_web_acl.prd-waf.arn
 }
+
+# WAF code ends here
 */
 
 resource "aws_network_acl" "prd-rds-nacl" {
