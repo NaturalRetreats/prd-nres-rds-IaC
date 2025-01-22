@@ -222,6 +222,14 @@ resource "aws_security_group" "prd-ec2-sg" {
     cidr_blocks     = ["0.0.0.0/0"]
   }
 
+  ingress {
+    description = "Allow inbound 10050-10051" # for vector monitoring
+    from_port   = 10050
+    to_port     = 10051
+    protocol    = "tcp"
+    cidr_blocks = ["54.196.151.41/32"]
+  }
+
   egress {
     description = "Allow Oracle DB access" # to RDS
     from_port   = 1521
